@@ -6,9 +6,12 @@ public class Task7 {
     }
 
     public static boolean checkNDuplicate(int[] nums){
-        for(int i = 0; i < nums.length - 1; ++i){
-            for(int j = i + 1; j < nums.length; ++j){
-                if(nums[i] == 2 * nums[j]){
+        for(int i = 0; i < nums.length; ++i){
+            for(int j = 0; j < nums.length; ++j){
+                if(i == j){
+                    continue;
+                }
+                else if(nums[i] == 2 * nums[j]){
                     return true;
                 }
             }
